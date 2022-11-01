@@ -75,6 +75,7 @@
   --dark: #0f1220;
   --light: #f2f2f2;
   --text: #4b56a1;
+  --text-light: #485593;
   --light-25: rgba(242, 242, 242, 0.25);
   --bg: #0b0c18;
   --primary: #1651f3;
@@ -165,10 +166,31 @@ a {
 .mainContent {
   width: 100%;
   height: 100%;
-  max-width: 900px;
+  max-width: calc(900px + 0.25rem);
   margin: 0 auto;
-  background: var(--primary-light);
   overflow: auto;
+  padding-right: 0.25rem;
+}
+
+.mainContent::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.mainContent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mainContent::-webkit-scrollbar-thumb {
+  background: var(--grey);
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  border-radius: 10px;
+  border: 0.125rem solid var(--bg);
+}
+
+.mainContent::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
 }
 
 /* @media (prefers-color-scheme: dark) {

@@ -3,22 +3,25 @@ import Messages from 'icons/messages/Messages'
 import Heart from 'icons/support/Heart'
 import style from './style.module.css'
 
-export default function PlaceCard() {
+export type Props = {
+  placeImage: string
+  userName: string
+  avatar: string
+}
+
+export default function PlaceCard({ placeImage, userName, avatar }: Props) {
   return (
     <article className={style.card}>
       <picture className={style.image}>
-        <img
-          src="https://images.unsplash.com/photo-1667224974266-a1d8bfecc7fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
-          alt=""
-        />
+        <img src={placeImage} alt="" />
       </picture>
 
       <footer className={style.data}>
         <div className={style.user}>
           <picture className={style.avatar}>
-            <img src="https://i.pinimg.com/564x/f0/75/49/f075496674e601a3d6915866f57671d1.jpg" alt="" />
+            <img src={avatar} alt="" />
           </picture>
-          <span className={style.username}>Francine wookinn</span>
+          <span className={style.username}>{userName}</span>
         </div>
         <div className={style.options}>
           <button className={style.optionBtn}>

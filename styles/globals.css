@@ -82,7 +82,8 @@
   --primary-light: rgba(22, 81, 243, 0.25);
   --white: #ffffff;
   --grey: #1e223f;
-  --grey-light: rgb(156, 163, 175);
+  --grey-light: #4a569a;
+  --grey-light-85: rgba(74, 86, 154, 0.85);
 
   --sidebar-height-mobile: 80px;
   --sidebar-width-desktop: 80px;

@@ -1,3 +1,4 @@
+import Avatar from 'components/Avatar'
 import Send from 'icons/essetional/Send'
 import Messages from 'icons/messages/Messages'
 import Heart from 'icons/support/Heart'
@@ -18,9 +19,7 @@ export default function PlaceCard({ placeImage, userName, avatar }: Props) {
 
       <footer className={style.data}>
         <div className={style.user}>
-          <picture className={style.avatar}>
-            <img src={avatar} alt="" />
-          </picture>
+          <Avatar bordered src={avatar} alt={userName} />
           <span className={style.username}>{userName}</span>
         </div>
         <div className={style.options}>

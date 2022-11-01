@@ -1,25 +1,43 @@
+import Send from 'icons/essetional/Send'
+import Home from 'icons/essetional/Home'
 import style from './style.module.css'
+import Messages from 'icons/messages/Messages'
+import Users from 'icons/users/Users'
+import Bookmark from 'icons/archive/Bookmark'
+import Settings from 'icons/settings/Settings'
 
 export default function Sidebar() {
   return (
     <nav className={style.sidebar}>
-      <button>✈</button>
+      <button>
+        <Send size={32} />
+      </button>
 
       <ul className={style.options}>
         <li className={style.item}>
-          <button>🏠</button>
+          <button>
+            <Home size={20} />
+          </button>
         </li>
         <li className={style.item}>
-          <button>🏠</button>
+          <button>
+            <Messages size={20} />
+          </button>
         </li>
         <li className={style.item} data-hide-mobile>
-          <button>🏠</button>
+          <button>
+            <Users size={20} />
+          </button>
         </li>
         <li className={style.item} data-hide-mobile>
-          <button>🏠</button>
+          <button>
+            <Bookmark size={20} />
+          </button>
         </li>
         <li className={style.item}>
-          <button>🏠</button>
+          <button>
+            <Settings size={20} />
+          </button>
         </li>
       </ul>
     </nav>

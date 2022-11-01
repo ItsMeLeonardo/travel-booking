@@ -1,9 +1,117 @@
+/* ======= color scheme ======= */
+:root {
+  --white: #fff;
+  --black: #000;
+  --grey-900: #23263b;
+  --grey-800: #36395a;
+  --grey-700: #484c7a;
+  --grey-600: #5a5e9a;
+  --grey-500: #777aaf;
+  --grey-400: #9698c3;
+  --grey-300: #b6b7d5;
+  --grey-200: #d6d6e7;
+  --grey-100: #f5f5fa;
+  --grey-050: #fcfcfd;
+  --grey-000: #fff;
+  --pink-900: #59063d;
+  --pink-800: #88085c;
+  --pink-700: #b80979;
+  --pink-600: #e90a96;
+  --pink-500: #f82caa;
+  --pink-400: #fb5abc;
+  --pink-300: #fd89ce;
+  --pink-200: #feb9e2;
+  --pink-100: #ffeaf6;
+  --nebula-900: #141d61;
+  --nebula-800: #1e2b8f;
+  --nebula-700: #2b3cbb;
+  --nebula-600: #3c4fe0;
+  --nebula-500: #5468ff;
+  --nebula-400: #7c8aff;
+  --nebula-300: #a3acff;
+  --nebula-200: #cacfff;
+  --nebula-100: #f2f3ff;
+  --cyan-900: #00526c;
+  --cyan-800: #00769b;
+  --cyan-700: #009bcb;
+  --cyan-600: #0db7eb;
+  --cyan-500: #2cc8f7;
+  --cyan-400: #5adaff;
+  --cyan-300: #89e5ff;
+  --cyan-200: #b9efff;
+  --cyan-100: #e8faff;
+  --green-900: #005e36;
+  --green-800: #028950;
+  --green-700: #06b66c;
+  --green-600: #0de589;
+  --green-500: #5feb9e;
+  --green-400: #88f0b3;
+  --green-300: #aaf4c8;
+  --green-200: #c9f8de;
+  --green-100: #e6fcf3;
+  --orange-900: #963209;
+  --orange-800: #bf470a;
+  --orange-700: #e8600a;
+  --orange-600: #f78125;
+  --orange-500: #faa04b;
+  --orange-400: #fcbc73;
+  --orange-300: #fed59a;
+  --orange-200: #ffe9c3;
+  --orange-100: #fff9ec;
+  --red-900: #83111e;
+  --red-800: #ab1325;
+  --red-700: #d4142a;
+  --red-600: #ee243c;
+  --red-500: #f4495d;
+  --red-400: #f86e7e;
+  --red-300: #fc95a1;
+  --red-200: #febdc5;
+  --red-100: #ffe6e9;
+  --search: #5468ff;
+  --answers: #952aff;
+  --recommend: #ff2a6a;
+  --current: currentColor;
+
+  --dark: #0f1220;
+  --light: #f2f2f2;
+  --text: #4b56a1;
+  --light-25: rgba(242, 242, 242, 0.25);
+  --bg: #0b0c18;
+  --primary: #1651f3;
+  --primary-light: rgba(22, 81, 243, 0.25);
+  --white: #ffffff;
+  --grey: #1e223f;
+  --grey-light: rgb(156, 163, 175);
+
+  --sidebar-width: 80px;
+  --acitivty-bar-width: 300px;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
@@ -11,11 +119,59 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media (min-width: 768px) {
+    padding: 0.5rem;
+    grid-template-columns: var(--sidebar-width) 1fr;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: var(--sidebar-width) 1fr var(--acitivty-bar-width);
+  }
 }
 
-@media (prefers-color-scheme: dark) {
+.accountActivity {
+  --left: 0.5rem;
+  position: absolute;
+  width: calc(100% - var(--left) * 2);
+  height: calc(100% - var(--left) * 2);
+  bottom: var(--left);
+  left: var(--left);
+  background: var(--grey);
+  border-radius: 1rem;
+  z-index: 1;
+
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: var(--acitivty-bar-width);
+    height: 100%;
+  }
+}
+
+.mainContent {
+  width: 100%;
+  height: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--primary-light);
+  overflow: auto;
+}
+
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -24,3 +180,4 @@ a {
     background: black;
   }
 }
+ */

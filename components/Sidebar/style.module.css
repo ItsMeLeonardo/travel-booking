@@ -1,0 +1,51 @@
+.sidebar {
+  --left: 0.5rem;
+  width: calc(100% - var(--left) * 2);
+  display: flex;
+  padding: 1rem;
+  background: var(--grey);
+  position: fixed;
+  bottom: var(--left);
+  left: var(--left);
+  border-radius: 1rem;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    top: 0;
+    left: 0;
+    position: relative;
+    padding: 1.5rem;
+    flex-direction: column;
+    width: var(--sidebar-width);
+    height: 100%;
+  }
+
+  .options {
+    display: flex;
+    gap: 1rem;
+
+    @media (min-width: 768px) {
+      flex-direction: column;
+    }
+
+    .item {
+      &[data-hide-mobile] {
+        display: none;
+
+        @media (min-width: 768px) {
+          display: initial;
+        }
+      }
+
+      button {
+        --size: 2rem;
+        width: var(--size);
+        height: var(--size);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--primary);
+      }
+    }
+  }
+}

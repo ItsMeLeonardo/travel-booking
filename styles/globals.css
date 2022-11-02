@@ -178,16 +178,16 @@ a {
   }
 }
 
-.mainContent::-webkit-scrollbar {
+*::-webkit-scrollbar {
   width: 0.5rem;
   height: 0.5rem;
 }
 
-.mainContent::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.mainContent::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
   background: var(--grey);
   -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
@@ -195,7 +195,7 @@ a {
   border: 0.125rem solid var(--bg);
 }
 
-.mainContent::-webkit-scrollbar-thumb:hover {
+*::-webkit-scrollbar-thumb:hover {
   background: var(--primary-light);
 }
 

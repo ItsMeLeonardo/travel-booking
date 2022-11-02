@@ -1,0 +1,36 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2.5rem;
+}
+
+.filter {
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  .options {
+    display: flex;
+    gap: 0.5rem;
+
+    .option {
+      font-size: 0.95rem;
+      color: var(--text);
+      padding: 0.25rem 0.75rem;
+
+      &:hover {
+        color: var(--primary);
+      }
+
+      &[data-active='true'] {
+        color: var(--primary);
+        font-weight: 600;
+      }
+    }
+  }
+}

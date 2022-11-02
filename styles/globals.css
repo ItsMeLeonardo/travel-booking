@@ -167,7 +167,7 @@ a {
 
 .mainContent {
   width: 100%;
-  height: calc(100vh + var(--sidebar-height-mobile));
+  height: calc(100vh + var(--sidebar-height-mobile) * 2.5);
   max-width: calc(900px + 0.25rem);
   margin: 0 auto;
   overflow: auto;

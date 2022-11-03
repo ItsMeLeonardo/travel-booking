@@ -87,7 +87,7 @@
 
   --sidebar-height-mobile: 80px;
   --sidebar-width-desktop: 80px;
-  --acitivty-bar-width: 300px;
+  --acitivty-bar-width: 320px;
 }
 
 html,
@@ -102,6 +102,11 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+*:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 button {
@@ -152,6 +157,7 @@ a {
   background: var(--grey);
   border-radius: 1rem;
   z-index: 1;
+  padding: 1rem;
 
   display: none;
 

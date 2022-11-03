@@ -23,9 +23,9 @@ export default function HomeUser({ name, avatar, seeAll, isOwn }: Props) {
   if (isOwn) text = 'You'
 
   return (
-    <div className={style.user}>
+    <button className={style.user}>
       <Avatar bordered size="lg" src={avatar} alt={name} icon={icon} />
       <span className={style.name}>{text}</span>
-    </div>
+    </button>
   )
 }

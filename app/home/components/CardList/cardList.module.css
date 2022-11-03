@@ -32,7 +32,8 @@
       color: var(--text);
       padding: 0.25rem 0.75rem;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: var(--primary);
       }
 

@@ -72,7 +72,8 @@
           transition: opacity 0.2s ease;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
           color: var(--primary);
 
           &::before {

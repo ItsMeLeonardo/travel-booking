@@ -33,11 +33,6 @@ const users = [
     avatar: 'https://i.pinimg.com/236x/8d/b8/eb/8db8ebaa978d0c901bbf64317c96cfca.jpg',
   },
   {
-    name: 'diego',
-    avatar:
-      'https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
-  },
-  {
     name: 'Maria',
     avatar: 'https://i.pinimg.com/236x/60/ad/2f/60ad2fbaa11979a9e8b489de4b18b2c5.jpg',
   },

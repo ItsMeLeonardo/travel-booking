@@ -96,7 +96,8 @@
           font-size: 0.75rem;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
           background-color: var(--hover);
           border-radius: 0.5rem;
 

@@ -159,8 +159,8 @@ a {
   border-radius: 1rem;
   z-index: 1;
   padding: 1rem;
-
-  display: none;
+  overflow: auto;
+  /* display: none; */
 
   @media (min-width: 1024px) {
     display: block;

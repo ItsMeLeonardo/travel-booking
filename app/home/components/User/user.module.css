@@ -5,13 +5,17 @@
   justify-content: center;
   cursor: pointer;
   gap: 0.75rem;
+  padding: 0;
+  color: var(--text);
+  border-radius: 0.5rem;
 
   .name {
     font-size: 0.85rem;
     transition: color 0.15s ease-in;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     .name {
       color: var(--primary);
     }

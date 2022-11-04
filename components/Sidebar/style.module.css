@@ -48,7 +48,7 @@
         }
       }
 
-      button {
+      .optionBtn {
         --size: 3rem;
         width: var(--size);
         height: var(--size);
@@ -75,6 +75,14 @@
 
         &:hover,
         &:focus {
+          color: var(--primary);
+
+          &::before {
+            opacity: 0.15;
+          }
+        }
+
+        &[data-active='true'] {
           color: var(--primary);
 
           &::before {

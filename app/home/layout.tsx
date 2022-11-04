@@ -8,9 +8,7 @@ export default function HomeLayout({ children }: { children: ReactNode }) {
     <div className="container">
       <Sidebar />
       <main className="mainContent">{children}</main>
-      <section className="accountActivity">
-        <AccountActivity />
-      </section>
+      <AccountActivity />
     </div>
   )
 }

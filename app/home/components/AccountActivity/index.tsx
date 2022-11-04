@@ -1,9 +1,15 @@
+'use client'
+
+import { useState, useEffect } from 'react'
+
 import User from 'components/User'
 import Bookmark from 'icons/archive/Bookmark'
 import Notification from 'icons/notification/Notification'
 import SearchNormal from 'icons/search/SearchFavorite'
+import Category from 'icons/settings/Category'
 import SeeAllSection from '../SeeAllSection'
 import style from './accountActivity.module.css'
+import CloseCircle from 'icons/essetional/CloseCircle'
 
 const users = [
   {
@@ -43,43 +49,62 @@ const saved = [
 ]
 
 export default function AccountActivity() {
+  const [open, setOpen] = useState(false)
+
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }, [open])
+
+  const toggleOpen = () => setOpen(!open)
+
   return (
-    <div className={style.container}>
-      <header className={style.header}>
-        <label className={style.inputSearch}>
-          <span className={style.icon}>
-            <SearchNormal size={16} />
-          </span>
-          <input type="text" placeholder="search something" className={style.input} />
-        </label>
-        <button className={style.iconButton}>
-          <Notification size={18} />
-        </button>
-        <button className={style.iconButton}>
-          <Bookmark size={18} />
-        </button>
-      </header>
-
-      <SeeAllSection title="People of Follow" to="#">
-        {users.map((user) => (
-          <div className={style.profile} key={user.email}>
-            <User src={user.avatar} alt={user.name} bordered name={user.username} description={user.email} />
-            <button className={style.followBtn} data-followed={user.followed}>
-              {user.followed ? 'Followed' : 'Follow'}
+    <>
+      <button className={style.toggleBtn} onClick={toggleOpen} data-open={open}>
+        {open ? <CloseCircle /> : <Category />}
+      </button>
+      <section className={style.accountActivity} data-open={open}>
+        <div className={style.container}>
+          <header className={style.header}>
+            <label className={style.inputSearch}>
+              <span className={style.icon}>
+                <SearchNormal size={16} />
+              </span>
+              <input type="text" placeholder="search something" className={style.input} />
+            </label>
+            <button className={style.iconButton}>
+              <Notification size={18} />
             </button>
-          </div>
-        ))}
-      </SeeAllSection>
-
-      <SeeAllSection title="You Saved" to="#">
-        <div className={style.savedGrid}>
-          {saved.map(({ picture }) => (
-            <button key={picture} className={style.image}>
-              <img src={picture} alt="" />
+            <button className={style.iconButton}>
+              <Bookmark size={18} />
             </button>
-          ))}
+          </header>
+
+          <SeeAllSection title="People of Follow" to="#">
+            {users.map((user) => (
+              <div className={style.profile} key={user.email}>
+                <User src={user.avatar} alt={user.name} bordered name={user.username} description={user.email} />
+                <button className={style.followBtn} data-followed={user.followed}>
+                  {user.followed ? 'Followed' : 'Follow'}
+                </button>
+              </div>
+            ))}
+          </SeeAllSection>
+
+          <SeeAllSection title="You Saved" to="#">
+            <div className={style.savedGrid}>
+              {saved.map(({ picture }) => (
+                <button key={picture} className={style.image}>
+                  <img src={picture} alt="" />
+                </button>
+              ))}
+            </div>
+          </SeeAllSection>
         </div>
-      </SeeAllSection>
-    </div>
+      </section>
+    </>
   )
 }

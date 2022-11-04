@@ -89,6 +89,8 @@
   --sidebar-height-mobile: 80px;
   --sidebar-width-desktop: 80px;
   --acitivty-bar-width: 320px;
+
+  --acitivty-bar-z-index: 100;
 }
 
 html,
@@ -145,30 +147,6 @@ a {
 
   @media (min-width: 1024px) {
     grid-template-columns: var(--sidebar-width-desktop) 1fr var(--acitivty-bar-width);
-  }
-}
-
-.accountActivity {
-  --left: 0.5rem;
-  position: absolute;
-  width: calc(100% - var(--left) * 2);
-  height: calc(100% - var(--left) * 2);
-  bottom: var(--left);
-  left: var(--left);
-  background: var(--grey);
-  border-radius: 1rem;
-  z-index: 1;
-  padding: 1rem;
-  overflow: auto;
-  /* display: none; */
-
-  @media (min-width: 1024px) {
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    width: var(--acitivty-bar-width);
-    height: 100%;
   }
 }
 

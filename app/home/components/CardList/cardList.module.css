@@ -24,7 +24,12 @@
 
   .options {
     display: flex;
-    gap: 0.5rem;
+    padding: 0.25rem;
+    overflow: auto;
+
+    @media (min-width: 512px) {
+      gap: 0.5rem;
+    }
 
     .option {
       font-size: 0.95rem;

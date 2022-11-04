@@ -25,12 +25,12 @@
   .options {
     display: flex;
     gap: 0.5rem;
-    overflow: auto;
 
     .option {
       font-size: 0.95rem;
       color: var(--text);
       padding: 0.25rem 0.75rem;
+      border-radius: 0.25rem;
 
       &:hover,
       &:focus {

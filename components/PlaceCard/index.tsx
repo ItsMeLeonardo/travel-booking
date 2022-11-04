@@ -8,12 +8,15 @@ export type Props = {
   placeImage: string
   userName: string
   avatar: string
+  focusable?: boolean
 }
 
-export default function PlaceCard({ placeImage, userName, avatar }: Props) {
+export default function PlaceCard({ focusable, placeImage, userName, avatar }: Props) {
+  const tabIndex = focusable ? 0 : -1
+
   return (
     <article className={style.card}>
-      <picture className={style.image}>
+      <picture className={style.image} tabIndex={tabIndex}>
         <img src={placeImage} alt="" />
       </picture>
 

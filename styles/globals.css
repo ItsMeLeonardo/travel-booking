@@ -178,7 +178,7 @@ a {
   max-width: calc(900px + 0.25rem);
   margin: 0 auto;
   overflow: auto;
-  padding-right: 0.25rem;
+  padding-inline: 0.25rem;
 
   @media (min-width: 768px) {
     height: 100%;

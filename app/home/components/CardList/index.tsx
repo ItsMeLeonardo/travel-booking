@@ -33,7 +33,7 @@ export default function CardList() {
       </div>
       <div className={style.list}>
         {places.map((place) => (
-          <PlaceCard key={place.userName} {...place} />
+          <PlaceCard key={place.userName} {...place} focusable />
         ))}
       </div>
     </section>

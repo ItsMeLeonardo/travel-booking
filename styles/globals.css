@@ -188,6 +188,16 @@ a {
   background: var(--primary-light);
 }
 
+.errorContainer {
+  width: 100%;
+  border-radius: 0.5rem;
+  background: var(--danger-25);
+  padding: 1rem;
+  color: var(--white);
+
+  border: solid 2px var(--danger);
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

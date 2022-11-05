@@ -1,21 +1,17 @@
 import { use } from 'react'
 import User from 'components/User'
 
-import { Data as FollowResponse } from 'pages/api/follow'
+import { getUserOfFollow } from 'services/follow'
 
 import style from './peopleFollow.module.css'
+import PeopleFollowError from './Error'
 
-const getUserOfFollow = async () => {
-  const response = await fetch(`http://localhost:3000/api/follow`, {
-    next: {
-      revalidate: 1 * 60 * 60,
-    },
-  })
-  const users = await response.json()
-  return users as FollowResponse[]
-}
 export default function PeopleFollow() {
   const users = use(getUserOfFollow())
+
+  if (users instanceof Error) {
+    return <PeopleFollowError error={{ message: 'Error getting users, try to refresh the page' } as Error} />
+  }
 
   return (
     <>

@@ -30,5 +30,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data[]
 
   setTimeout(() => {
     res.status(200).json(data)
-  }, 1000)
+  }, 2000)
 }

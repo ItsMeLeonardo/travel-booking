@@ -1,17 +1,18 @@
 import HomeUser from '../User'
+import { getHistories } from 'services/histories'
 
 import style from './header.module.css'
-
-import { History } from 'entities/history'
-
-const getHistories = async () => {
-  const response = await fetch('http://localhost:3000/api/history')
-  const histories = (await response.json()) as History[]
-  return histories
-}
+import HeaderError from './Error'
 
 export default async function HomeHeader() {
   const histories = await getHistories()
+  if (histories instanceof Error) {
+    return (
+      <div className={style.header}>
+        <HeaderError error={{ message: 'Error getting histories, try to refresh the page' } as Error} />
+      </div>
+    )
+  }
 
   return (
     <header className={style.header}>

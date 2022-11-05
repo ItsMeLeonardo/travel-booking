@@ -1,0 +1,69 @@
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .followBtn {
+    width: 100px;
+    text-align: center;
+    background: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 0.35rem;
+
+    &[data-followed='true'] {
+      border: solid 2px var(--primary);
+      background: transparent;
+      color: var(--primary);
+    }
+  }
+}
+
+.loader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .user {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    .avatar {
+      --size: 3rem;
+      width: var(--size);
+      height: var(--size);
+      border-radius: 50%;
+      background: var(--loader-bg);
+    }
+
+    .data {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      justify-content: center;
+      align-items: flex-start;
+      .name {
+        background: var(--loader-bg);
+        width: 70px;
+        height: 1rem;
+        border-radius: 0.25rem;
+      }
+      .description {
+        background: var(--loader-bg);
+        width: 100px;
+        height: 0.8rem;
+        border-radius: 0.25rem;
+      }
+    }
+  }
+
+  .followBtn {
+    width: 100px;
+    height: 2.125rem;
+    background: var(--loader-bg);
+    border-radius: 0.35rem;
+  }
+}

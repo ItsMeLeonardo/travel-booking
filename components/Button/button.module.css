@@ -1,0 +1,13 @@
+.button {
+  text-align: center;
+  background: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 0.35rem;
+
+  &[data-variant='danger'] {
+    background: var(--danger);
+  }
+}

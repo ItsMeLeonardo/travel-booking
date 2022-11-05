@@ -73,6 +73,9 @@
   --recommend: #ff2a6a;
   --current: currentColor;
 
+  --danger: #f4495d;
+  --danger-25: rgba(244, 73, 93, 0.25);
+
   --dark: #0f1220;
   --light: #f2f2f2;
   --text: #4b56a1;

@@ -85,6 +85,7 @@
   --grey: #1e223f;
   --grey-light: #4a569a;
   --grey-light-85: rgba(74, 86, 154, 0.85);
+  --loader-bg: #383b50;
 
   --sidebar-height-mobile: 80px;
   --sidebar-width-desktop: 80px;

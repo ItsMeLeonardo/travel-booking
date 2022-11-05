@@ -12,7 +12,7 @@
   .image {
     width: 100%;
     aspect-ratio: 16/9;
-    background-color: #eee;
+    background-color: var(--loader-bg);
     border-radius: 1rem;
     height: 240px;
 
@@ -38,7 +38,7 @@
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
-        background-color: #eee;
+        background-color: var(--loader-bg);
 
         img {
           width: 100%;
@@ -116,6 +116,63 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+.loader {
+  width: 100%;
+  aspect-ratio: 2/1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .image {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background-color: var(--loader-bg);
+    border-radius: 1rem;
+    height: 240px;
+  }
+
+  .data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .user {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .avatar {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-color: var(--loader-bg);
+      }
+
+      .username {
+        width: 4rem;
+        height: 1rem;
+        background-color: var(--loader-bg);
+        border-radius: 0.5rem;
+      }
+    }
+
+    .options {
+      display: flex;
+      gap: 0.5rem;
+
+      .optionBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--loader-bg);
+        width: 2.5rem;
+        height: 0.75rem;
+        border-radius: 0.5rem;
       }
     }
   }

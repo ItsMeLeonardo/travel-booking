@@ -2,6 +2,7 @@ import Avatar from 'components/Avatar'
 import Send from 'icons/essetional/Send'
 import Messages from 'icons/messages/Messages'
 import Heart from 'icons/support/Heart'
+
 import style from './style.module.css'
 
 export type Props = {

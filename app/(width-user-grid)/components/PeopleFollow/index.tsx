@@ -6,8 +6,10 @@ import { getUserOfFollow } from 'services/follow'
 import style from './peopleFollow.module.css'
 import PeopleFollowError from './Error'
 
+const promise = getUserOfFollow()
+
 export default function PeopleFollow() {
-  const users = use(getUserOfFollow())
+  const users = use(promise)
 
   if (users instanceof Error) {
     return <PeopleFollowError error={{ message: 'Error getting users, try to refresh the page' } as Error} />

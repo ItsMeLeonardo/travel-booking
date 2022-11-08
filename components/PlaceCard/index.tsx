@@ -2,6 +2,7 @@ import Avatar from 'components/Avatar'
 import Send from 'icons/essetional/Send'
 import Messages from 'icons/messages/Messages'
 import Heart from 'icons/support/Heart'
+import Image from 'next/image'
 
 import style from './style.module.css'
 
@@ -18,7 +19,7 @@ export default function PlaceCard({ focusable, placeImage, userName, avatar }: P
   return (
     <article className={style.card}>
       <picture className={style.image} tabIndex={tabIndex}>
-        <img src={placeImage} alt="" />
+        <Image height={1200} width={700} src={placeImage} alt="" />
       </picture>
 
       <footer className={style.data}>

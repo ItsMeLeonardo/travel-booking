@@ -7,16 +7,20 @@ export type Data = {
 
 const saved = [
   {
-    picture: 'https://i.pinimg.com/236x/11/dd/29/11dd29e31c4633a7fafbb1e0336a93bb.jpg',
+    picture:
+      'https://images.unsplash.com/photo-1667644549367-eeece78622dd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxN3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
   },
   {
-    picture: 'https://i.pinimg.com/564x/90/21/ba/9021ba02649c0904b14fbf94b5a9489c.jpg',
+    picture:
+      'https://images.unsplash.com/photo-1667645336881-ef64b3fb3cde?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
   },
   {
-    picture: 'https://i.pinimg.com/236x/d8/02/23/d802235866f2f70df3d122eec4a3f996.jpg',
+    picture:
+      'https://images.unsplash.com/photo-1667589058626-1ccff4a76f51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
   },
   {
-    picture: 'https://i.pinimg.com/236x/fe/e8/f6/fee8f6c0419006f12d27ee3812cb54c1.jpg',
+    picture:
+      'https://images.unsplash.com/photo-1667530269833-34e6823185d0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1Nnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60',
   },
 ]
 

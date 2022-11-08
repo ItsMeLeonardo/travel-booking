@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import type { ReactNode, DetailedHTMLProps, HTMLAttributes } from 'react'
 import style from './avatar.module.css'
 
@@ -22,10 +24,10 @@ export default function Avatar(props: Props) {
   return (
     <picture className={style.avatar} data-size={size} data-bordered={bordered} {...pictureProps}>
       {justIcon && <span className={style.icon}>{icon}</span>}
-      {justImg && <img src={src} alt={alt} />}
+      {justImg && <Image width={80} height={80} src={src} alt={alt} />}
       {hasIconAndImg && (
         <div className={style.bothContainer}>
-          <img src={src} alt={alt} />
+          <Image width={80} height={80} src={src} alt={alt} />
           <span className={style.icon} data-has-both>
             {icon}
           </span>

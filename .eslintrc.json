@@ -3,7 +3,6 @@
 
   "rules": {
     "no-unused-vars": "error",
-    "no-console": "warn",
-    "@next/next/no-img-element": "off"
+    "no-console": "warn"
   }
 }

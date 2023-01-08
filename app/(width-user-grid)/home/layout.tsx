@@ -10,6 +10,7 @@ export default function HomeLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <Suspense fallback={<HeaderLoader />}>
+        {/* @ts-ignore */}
         <HomeHeader />
       </Suspense>
       <section>

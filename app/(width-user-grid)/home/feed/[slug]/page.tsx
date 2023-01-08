@@ -14,6 +14,7 @@ export default function FeedPage({ params }: Props) {
 
   return (
     <Suspense fallback={<CardListLoader />}>
+      {/* @ts-ignore */}
       <CardList filter={filter} />
     </Suspense>
   )
